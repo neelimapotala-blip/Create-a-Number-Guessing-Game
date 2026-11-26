@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Play Number Quest{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="eyebrow">A LITTLE LOGIC. A LOT OF FUN.</div>
+  <h1>Can you guess<br><span>the number?</span></h1>
+  <p class="subtitle">I’m thinking of a number between 1 and 100. Make a guess and I’ll tell you if you’re too high or too low.</p>
+  <form class="start-form" method="post">
+    <label for="player_name">Your name</label>
+    <input id="player_name" name="player_name" maxlength="20" placeholder="Enter your name" required>
+    <button class="button primary" type="submit">Start playing <span>→</span></button>
+  </form>
+  <div class="feature-row">
+    <div><strong>01—100</strong><small>Number range</small></div>
+    <div><strong>∞</strong><small>Guesses allowed</small></div>
+    <div><strong>Top 10</strong><small>Leaderboard</small></div>
+  </div>
+</section>
+{% endblock %}

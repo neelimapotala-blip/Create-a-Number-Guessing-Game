@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Leaderboard{% endblock %}
+{% block content %}
+<section class="leader-card">
+  <div class="eyebrow">THE HALL OF FAME</div>
+  <h1>Leaderboard</h1>
+  <p class="subtitle">The fewest guesses earn the top spot.</p>
+  {% if scores %}
+  <div class="table-wrap"><table>
+    <thead><tr><th>Rank</th><th>Player</th><th>Attempts</th><th>Date</th></tr></thead>
+    <tbody>
+    {% for score in scores %}
+      <tr><td>#{{ loop.index }}</td><td>{{ score.player_name }}</td><td>{{ score.attempts }}</td><td>{{ score.played_at[:10] }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table></div>
+  {% else %}
+    <p class="empty">No scores yet. Be the first to play!</p>
+  {% endif %}
+  <a class="button primary full" href="{{ url_for('index') }}">Start a game</a>
+</section>
+{% endblock %}
