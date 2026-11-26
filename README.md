@@ -1,29 +1,28 @@
-# Number Quest — Number Guessing Game
+### Project Description: Number Guessing Game
 
-A responsive Python Flask game with a SQLite leaderboard.
+The Number Guessing Game is a simple and interactive web application developed using Python, Flask, HTML, CSS, and SQLite. The main objective of this game is to allow users to guess a randomly generated number between 1 and 100.
 
-## Features
-- Random number from 1 to 100
-- High/low hints and attempt counter
-- Input validation
-- New game option
-- SQLite database stores completed scores
-- Responsive HTML/CSS interface
+Players enter their names and start the game. The application provides hints such as "Too High" or "Too Low" to help players find the correct number. It also counts the number of attempts taken to guess the correct number.
 
-## Run locally
-1. Install Python 3.10 or newer.
-2. Open a terminal in this project folder.
-3. Create and activate a virtual environment (recommended).
-4. Install dependencies:
+The application uses SQLite to store player names and their scores. A leaderboard displays the top 10 players based on the fewest attempts.
 
-   `pip install -r requirements.txt`
+**Key Features:**
+1. Random number generation.
+2. Interactive guessing system.
+3. Higher and lower hints.
+4. Attempt counting.
+5. Player score storage using SQLite.
+6. Top 10 leaderboard.
+7. Responsive and user-friendly interface.
 
-5. Start the app:
+**Technologies Used:**
+- Python
+- Flask
+- HTML
+- CSS
+- SQLite Database
 
-   `python app.py`
+**Expected Outcome:**
 
-6. Open `http://127.0.0.1:5000` in your browser.
+The project demonstrates Python programming, frontend development, backend logic, database integration, and responsive UI design. It provides an enjoyable gaming experience while demonstrating basic full-stack web development concepts.
 
-The SQLite database (`game.db`) is created automatically the first time the app runs.
-
-For deployment, set a strong secret key using an environment variable and turn off Flask debug mode.
